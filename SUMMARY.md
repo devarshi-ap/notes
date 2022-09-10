@@ -17,7 +17,7 @@
 * [Node](frameworks/node.md)
 * [React](frameworks/react.md)
 
-## 💿 Back-end
+## 💽 Back-end
 
 * [Bash](back-end/bash.md)
 * [Redux (Toolkit)](back-end/redux-toolkit.md)
@@ -32,6 +32,7 @@
 ## ♠ CPS530
 
 * [Week 1](cps530/week-1.md)
+* [Week 2](cps530/week-2.md)
 
 ## ♠ CPS305
 
