@@ -27,6 +27,7 @@
 ## ♠ CPS393
 
 * [Week 1](cps393/week-1.md)
+* [Week 2](cps393/week-2.md)
 
 ## ♠ CPS530
 
