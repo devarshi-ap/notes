@@ -4,7 +4,7 @@ description: Intro to WSD
 
 # Week 1
 
-`Internet` - world-wide network of computer network
+`Internet` - a world-wide network of computer network
 
 `TCP/IP` (Transmission Control Protocol/Internet Protocol) - communication protocols used to interconnect network devices on the internet.
 
