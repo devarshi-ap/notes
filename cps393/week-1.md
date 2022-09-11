@@ -221,16 +221,6 @@ Copy & Paste Lines:
 
 `ls - l`: lists w/ permissions
 
-ex.
-
-\-rw- r-x r-- 12 linuxize users 12.0K Apr 28 10:10 file\_name |\[-]\[- ]\[-] -  \[- - - - - -] \[- - -] | | | | |    |      | | | | | | |      +-------->    7. Group | | | | | +------------------->    6. Owner | | | | +-------------------------->    5. Alternate Access Method | | | +---------------------------->        4. Others Permissions | | +------------------------------->         3. Group Permissions | +---------------------------------->         2. Owner Permissions +------------------------------------>          1. File Type
-
-1. `File Type`: regular file (`-`) or directory (`d`)
-   * The following 9 characters represent the file permissions, 3 triplets of 3 characters each
-   * The first triplet shows the **owner permissions**, the second one **group permissions**, and the last triplet shows everybody else permissions.
-
-2 (Owners), 3 (Group), 4 (Others) Permissions
-
 ```
 - means not set ie. rwx means read, write, exec. capability
 
