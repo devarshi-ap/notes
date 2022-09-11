@@ -4,7 +4,7 @@ description: Basics of Bash, Moon Servers, & Vim
 
 # Week 1
 
-* ssh d244pate@moon.cs.ryerson.ca
+* ssh \<userid>@moon.cs.ryerson.ca
 * Change PW (if logged in): `passwd`
 * Logout: `exit`
 * Exit Vim: `:wq` (save) / `:q!` (no-save)
