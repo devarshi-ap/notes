@@ -11,7 +11,7 @@ description: Basics of Bash, Moon Servers, & Vim
 
 Path to _**LABS**_: `cd /usr/courses/cps393/dwoit/labs`
 
-Path to _**NOTES**_: `cd /usr/courses/cps393/dwoit/coursenotes`
+Path to _**NOTES**_: `cd /usr/courses/cps393/dwoit/courseNotes`
 
 * (u.txt = notes for week x)
 * copy file into your moon, then edit
