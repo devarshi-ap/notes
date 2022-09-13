@@ -219,7 +219,7 @@ Copy & Paste Lines:
 
 **Permissions**
 
-`ls - l`: lists w/ permissions
+`ls -l`: lists w/ permissions
 
 ```
 - means not set ie. rwx means read, write, exec. capability
