@@ -61,7 +61,7 @@ $ sh myscript
 Alternatively, in your `myscript.sh` file, do the following
 
 ```bash
-#! /bin/sh
+#!/bin/sh
 chmod u+x myscript    # sets 'executable' flag on the file
 ```
 
@@ -87,3 +87,68 @@ $ ./myscript foo bar baz    # params spaced after filename
 * `$@`: Comma seperated strings for each parameter name
   * `"foo", "bar", "baz"`
 * `shift`: Shifts Positional Parameters by 1
+
+
+
+**Grep**
+
+> _Global Regular Expression Print_
+>
+> syntax : `grep string filename(s)`
+>
+> * `string` : string to search for
+> * `filename(s)` : files to search string in
+>   * w/o file, grep will read from stdin until EOF
+>
+> Displays the lines of the file containing the string
+
+```bash
+# search for string in 1 file
+$ grep "editor" vimTutorial.txt
+
+    In this lab you will learn to use the vim editor by actually
+    This exits the editor, DISCARDING any changes you have made.
+    # and so on....
+
+# search for string in 2 files
+$ grep "scanf" waterTemp.c switch.c
+
+# filename:        line contents
+waterTemp.c:     scanf("%lf", &tmp);
+switch.c:        scanf("%c", &letter);
+```
+
+Options
+
+* `-i` : ignore case
+* `-v` : print liens **not matching** search string
+* `-x` : search string must match entire line
+
+Metacharacters
+
+* `.` : like `?` in glob (subs in any char)
+* `*` : 0 or more reps of previous char (not like `*` in glob)
+* `^` : patten must be at the start of the line (ie. `"^Raiders"`)
+* `$` : pattern must be at the end of a line (ie. `"Chargers$"`)
+* `\{m\}` : exactly **m** reps of previous char (ie. `"x\{3\}"`)
+* `\{m,\}` : atleast **m** reps of previous char
+* `\{m,n\}` : between **m** to **n** reps of previous char (inclusive)
+* `\<` : line has word that starts w/ character (ie. `"\<x"`)
+* `\>` : line has word that ends w/ character (ie. `"x\>"`)
+
+```bash
+# examples
+
+grep '^Assignment' fname # lines starting with Assignment
+grep -v '^Assignment' fname # lines not starting with Assignment
+grep 'Assignment$' fname # lines ending with Assignment
+grep 'd.g' fname # lines containing dag, dbg, dcg, d0g, d1g, etc
+grep 'su*m' fname # lines containing sm, sum, suum, suuum, etc
+grep 'suu*m' fname # lines containing sum, suum, suuum, etc
+grep '\<so\>' fname # the word so (vs. social, absolute)
+grep '[A-Za-z][A-Za-z]*' fname # lines containing ANY non-empty alpha string
+grep '^[A-Za-z][A-Za-z]*$' fname # lines containing ONLY alpha characters
+grep 'xyz\.w\{2,3\}X' # lines containing xyz.wwX or xyz.wwwX
+grep 'A(bc)\{2,3\}D' # lines containing AbcbcD or AbcbcbcD
+grep -x "abc" # lines that contain exactly and only abc
+```
