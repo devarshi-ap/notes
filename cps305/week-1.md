@@ -325,6 +325,9 @@ If `op` is 1 of 25 special words, the form is evaluated as a **`special form`**
     ; 2
     ; NIL
     ```
+
+``
+
 * `do` : more versatile looping
   * syntax :
     * (`do` ((`i` `[start value]` (`[increment by]` `[operation]` `i`)
