@@ -4,8 +4,6 @@ description: Intro to Lisp
 
 # Week 1
 
-
-
 ### Lisp <a href="#lisp" id="lisp"></a>
 
 > Acronym: _**List Processing**_ || _**Lots of Irritating Silly Parentheses**_
@@ -18,6 +16,8 @@ description: Intro to Lisp
 * (+ 2 3)               # prints 5 (quick temp. form)
 * (exit)                # either trash the terminal or enter (exit)
 ```
+
+****
 
 **Syntax Basics**
 
@@ -45,6 +45,8 @@ description: Intro to Lisp
     ```
 * **Vectors** : _faster_ list-like sequence
   * `#(1 2 3)`, `#(a "b" -2.0)`
+
+****
 
 **S-Expressions**
 
@@ -90,6 +92,8 @@ _symbolic expressions_ (aka _function application: non-empty list are themselves
 ; evaluates to 29/60
 ```
 
+****
+
 **Variables & Constants**
 
 > below ex. are for **global vars/const** ; for **local vars** use `let`>`defvar`
@@ -118,6 +122,8 @@ _symbolic expressions_ (aka _function application: non-empty list are themselves
       (defparameter B 20)
       ```
 
+****
+
 **Named Procedures (aka Functions)**
 
 syntax : `(defun [funcName] ([parameters]) ([body]) )`
@@ -133,6 +139,8 @@ syntax : `(defun [funcName] ([parameters]) ([body]) )`
 )
 ```
 
+****
+
 **Lambda (Anonymous Functions)**
 
 > much like in other languages, `lambda` fx's are quick one liners that are defined and called in the same line.
@@ -145,6 +153,8 @@ syntax : `( (lambda params body) arguments )`
 
 ((lambda (x y) (+ x y)) 2 2)    ; => 4
 ```
+
+****
 
 **Blocks + Progn**
 
@@ -177,6 +187,8 @@ syntax : `( (lambda params body) arguments )`
             (+ 2 2)
         )
         ```
+
+****
 
 **Special Forms**
 
@@ -213,9 +225,9 @@ If `op` is 1 of 25 special words, the form is evaluated as a **`special form`**
 ```
 
 * `or a1 ... aN`
-* all forms a1...aN are evaluated (L-to-R)
-* if _**any**_ form _ai_ evaluates to true, **`or` returns evaluation of **_**ai**_
-* if _**all**_ forms but aN evaluate to NIL, **`or` returns evaluation of aN**
+  * all forms a1...aN are evaluated (L-to-R)
+  * if _**any**_ form _ai_ evaluates to true, **`or` returns evaluation of **_**ai**_
+  * if _**all**_ forms but aN evaluate to NIL, **`or` returns evaluation of aN**
 
 ```lisp
 ; 3rd form is (< 3 4) (truthy)
@@ -227,7 +239,7 @@ If `op` is 1 of 25 special words, the form is evaluated as a **`special form`**
 (or 0 (* 3 3) 2 1)
 ```
 
-* _if\*_
+* **if**
   * `(if cond then [else])`
   * if `cond`-form is T, then evaluate `then`-form
   * opt. `[else]`-form is evaluated if `cond`-form is NIL (false)
